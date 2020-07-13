@@ -1,18 +1,20 @@
 # hello-world-api
 
 ## Prerequisites
+This section contains the list of prerequisites as well as installation information for each.
 
-1. Go version 1.14
-2. Docker version 19.03.8
-3. Port 8080 open on host machine
+1. Go version 1.14.  To install download the latest Go 1.14 package for your machine's OS at https://golang.org/dl/.  Then follow the steps for your OS and installation method at https://golang.org/doc/install to unpackage the binary and make executable on your machine.
+2. Docker version 19.03.8.  Follow the instructions at https://docs.docker.com/get-docker/ to install docker for your machine's OS.  
+
 
 ## Build Instructions
-Using the provided Dockerfile to build `hello-world:latest`, run the command in the project root directory:
+Using the provided Dockerfile to build image `hello-world:latest`, run the command in the project root directory:
 ```
 docker build . -t hello-world
 ```
+
 ## Run Instructions
-Run using the `docker run` command below:
+Run the API container with `docker run`.  The API listens on port 8080 in the container.  To access the endpoints you need to specify a port on your host machine to forward to port 8080 on the container by adding `-p <HOST PORT>:8080` to the `docker run` command. From here on out, the instructions assume port 8080 is also being used on the host machine.   
 ```
 docker run -itd -p 8080:8080 --name hello-world-api hello-world
 ```
@@ -22,7 +24,7 @@ Debug logs will look like the following `2020/07/13 01:50:43 - localhost:8080/`.
 
 Debug logging can be enabled upon container startup.  To enable logging use the following command:
 ```
-docker run -itd -p 8080:8080 --name hello-world-api hello-world api -d
+docker run -itd -p 8080:8080 --name hello-world-api hello-world api --debug
 ```
 
 To access the logs run: 
