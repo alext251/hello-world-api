@@ -4,7 +4,7 @@
 This section contains the list of prerequisites as well as installation information for each.
 
 1. Go version 1.14.  To install download the latest Go 1.14 package for your machine's OS at https://golang.org/dl/.  Then follow the steps for your OS and installation method at https://golang.org/doc/install to unpackage the binary and make executable on your machine.
-2. Docker version 19.03.8.  Follow the instructions at https://docs.docker.com/get-docker/ to install docker for your machine's OS.  
+2. Docker version 19.03.  Follow the instructions at https://docs.docker.com/get-docker/ to install docker for your machine's OS.  
 
 
 ## Build Instructions
